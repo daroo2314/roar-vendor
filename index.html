@@ -100,7 +100,7 @@
             }
             
             .main-content {
-                padding: 20px;
+                padding: 5px !important;
             }
             
             .vendor-categories {
@@ -152,10 +152,10 @@
         }
         @media (max-width: 480px) {
             .logo-placeholder {
-                max-width: 76vw;
+                max-width: 65vw;
             }
             .logo-placeholder img {
-                max-width: 76vw;
+                max-width: 65vw;
                 min-width: 64px;
             }
             .category-img {
@@ -297,6 +297,12 @@
             margin: 0 0px;
             text-align: center;
         }
+        /* 모바일에서 application-section의 padding 값을 15px로 */
+        @media (max-width: 768px) {
+            .application-section {
+                padding: 15px !important;
+            }
+        }
         
         .apply-title {
             font-size: 28px;
@@ -345,6 +351,7 @@
             align-items: center;
             justify-content: flex-start;
             gap: 18px;
+            position: relative;
         }
         @media (max-width: 600px) {
             .footer-section {
@@ -418,6 +425,46 @@
         @media (max-width: 600px) {
             .final-message {
                 font-size: 12px;
+            }
+        }
+
+        /* 소셜 아이콘 스타일 */
+        .footer-socials {
+            position: absolute;
+            top: 18px;
+            right: 30px;
+            display: flex;
+            gap: 12px;
+            z-index: 2;
+        }
+        .footer-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            transition: background 0.2s;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .footer-socials a:hover {
+            background: #e91e63;
+            color: #fff;
+        }
+        .footer-socials svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .footer-socials {
+                position: static;
+                margin-bottom: 8px;
+                justify-content: flex-end;
+                width: 100%;
             }
         }
         
@@ -532,7 +579,7 @@
                 </div>
                 
                 <div class="category-item">
-                    <img class="category-img" src="https://blog.kakaocdn.net/dna/bkxLFI/btsP5fFHKZq/AAAAAAAAAAAAAAAAAAAAAINjsOz4wovfVXPhJHeFwsDI9xWIU_Lt8OYvfGcleUY7/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=gM8B5K2ei6BBCexP5dFohqD%2BVxk%3D" alt="Commercial Vendors">
+                    <img class="category-img" src="https://blog.kakaocdn.net/dna/lvBrb/btsP5e1cb7q/AAAAAAAAAAAAAAAAAAAAAAmP2QWroUFqvZ2kbbuTm77hDNTeymzb886iL9ux-tnh/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=TUcIKNN2%2FvhTyzrPJIAUfSibKIE%3D" alt="Commercial Vendors">
                     <div class="category-texts">
                         <div class="category-title">Commercial Vendors</div>
                         <div class="category-description">
@@ -542,7 +589,7 @@
                 </div>
                 
                 <div class="category-item">
-                    <img class="category-img" src="https://blog.kakaocdn.net/dna/vRVTm/btsP2K1zsWM/AAAAAAAAAAAAAAAAAAAAAPEOg66uwzSX7LgtZj6VKB5RrfywTTu-ze9cFVqeB2TD/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=DtmGcMcAIhXAxeqMoBs7seZfeto%3D" alt="Business & Organization Vendors">
+                    <img class="category-img" src="https://blog.kakaocdn.net/dna/CA7wV/btsP4YYCeMZ/AAAAAAAAAAAAAAAAAAAAAHJaN7myXAbdfJQqm4alBb1pwAB61KuIFPPtO27B_LiS/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=vTSjby3aYG62bbWYyL1xaMk8BTg%3D" alt="Business & Organization Vendors">
                     <div class="category-texts">
                         <div class="category-title">Business & Organization Vendors</div>
                         <div class="category-description">
@@ -674,6 +721,7 @@
         
         <!-- 푸터 -->
         <div class="footer-section" style="text-align: center;">
+            
             <!-- <div class="footer-logo">
                 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FyWrYx%2FbtsP5Jfu8LP%2FAAAAAAAAAAAAAAAAAAAAAFH8MBBcB4lopFwLxsJ_uefWOUPVIjTtCCTqW6zuW_VV%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DnxeBmrMoLLbcyLFYj2zTZIZMcLE%253D" alt="Footer Logo" style="background: transparent;">
             </div> -->
@@ -687,6 +735,18 @@
                     and be part of a community<br>
                     that celebrates diversity, creativity, and togetherness!
                 </div>
+            </div>
+             <!-- 소셜 아이콘 영역 -->
+             <div class="footer-socials" style="display: flex; justify-content: center; gap: 12px; margin-top: 10px;">
+                <a href="https://www.instagram.com/roarculturalfestival">
+                    <img src="https://img.lovepik.com/png/20231104/instagram-social-platform-icon-emoticon-meta-Logo_482603_wh860.png" style="width: 2.4rem; height: auto; max-width: 100%;">
+                </a>
+                <a href="https://www.youtube.com/@darookoreanperformingartsa3690">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-youtube-268-721990.png?f=webp" style="width: 2.4rem; height: auto; max-width: 100%;">
+                </a>
+                <a href="https://www.tiktok.com/@roarculturalfestival?_t=ZP-8vK5VQweO5f&_r=1">
+                    <img src="https://img.freepik.com/premium-psd/tik-tok-icon-isolated-white-background-tiktok-logo-social-media-app-square-button-logo-sign_989822-4875.jpg?w=360" style="width: 2.4rem; height: auto; max-width: 100%;">
+                </a>
             </div>
         </div>
     </div>
